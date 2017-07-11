@@ -1,0 +1,9 @@
+<h1>New Post</h1>
+
+<%= render 'form', post: @post %>
+
+<%= link_to 'Back', posts_path %>
+
+<% if user.signed_in? %>
+<%= link_to "Sign_out", destroy_user_session_path, :method => 'delete', :class => "btn btn-info" %>
+<% end %>
